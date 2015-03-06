@@ -18,28 +18,24 @@ public class PwdGenerator {
             pwdgen.MaskPwd();
         }
         if(in.nextInt()==2){
-            PwdGenerator.RandPwd();
+            pwdgen.RandPwd();
         }
         
     }
     
     public String Letters = "abcdefghijklmnopqrstuvxyz";
-        String Numbers = "0123456789";
-        String Symbols = "!@#$%^&*()}{:[]";
-        public String Pwd = "";
-
-    public static void MaskPwd() {
-        String Letters = "abcdefghijklmnopqrstuvxyz";
-        String Numbers = "0123456789";
-        String Symbols = "!@#$%^&*()}{:[]";
-        String Pwd = "";
-        int i = 0;
-        int a = 0;
+    public String Numbers = "0123456789";
+    public String Symbols = "!@#$%^&*()}{:[]";
+    public String Pwd = "";
+    public int i = 0;
+    public int a = 0;
+    public String PwdMask = "ULDS";
+    public void MaskPwd() {
+        
         Scanner in = new Scanner(System.in);
         System.out.println("Введите маску пароля: ");
         String PwdUserMask = in.nextLine();
-        String PwdMask = "ULDS";
-
+        
         System.out.println("Вы ввели маску: " + PwdUserMask + " Длинной " + PwdUserMask.length() + " символов.");
         for (i = 0; i < PwdUserMask.length(); i++) {
 
@@ -72,9 +68,10 @@ public class PwdGenerator {
         System.exit(0);
     }
     
-    public static void RandPwd() {
-        System.out.println("Какие символы хотим в пароле?");
+    public void RandPwd() {
+        
         Scanner in = new Scanner(System.in);
+        System.out.println("Какие символы хотим в пароле?");
         String PwdUserMask = in.nextLine();
         
         System.out.println("Вы ввели маску: " + PwdUserMask + " Длинной " + PwdUserMask.length() + " символов.");
